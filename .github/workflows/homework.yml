@@ -1,0 +1,26 @@
+name: Type conversion
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Checkout the repository
+      - name: Checkout the repository
+        uses: actions/checkout@v2
+        with:
+          repository: codeschooluz/logical_operators_test
+          token: ${{secrets.TEST_KEY}}
+          path: test
+      - name: Install dependencies
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.9"
+      - name: Install pytest
+        run: |
+          pip install pytest
+      - name: Run tests
+        run: |
+          pytest -v --tb=no -q
