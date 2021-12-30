@@ -11,13 +11,13 @@ def main(a):
     Returns:
         string: the message to print
     """
-    if a > 99 and a % 2 == 1:
-        msg = "three-digit odd number"
-    if a > 99 and a % 2 == 0:
-        msg = "three-digit even number"
     if a > 9 and a % 2 == 1:
         msg = "two-digit odd number"
     if a > 9 and a % 2 == 0:
         msg = "two-digit even number"
+    if a > 99 and a % 2 == 1:
+        msg = "three-digit odd number"
+    if a > 99 and a % 2 == 0:
+        msg = "three-digit even number"
     
     return msg
