@@ -12,4 +12,15 @@ def main(a):
     Returns:
         string: the message to print
     """
-    return
+    if a == 0:
+        msg = "the number is zero"
+    if a > 0 and a % 2 == 1:
+        msg = "positive odd number"
+    if a > 0 and a % 2 == 0:
+        msg = "positive even number"
+    if a < 0 and a % 2 == 1:
+        msg = "negative odd number"
+    if a < 0 and a % 2 == 0:
+        msg = "negative even number"
+    
+    return msg
